@@ -1,214 +1,325 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
+/*  #Grid  */
+
+
+/*  #Container & Row  */
+
+.container {
+    position: relative;
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
-.clear-fix {
-  overflow: auto;
+.row {
+    width: 100%;
+    margin-bottom: 1%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
+
+/*  #Columns  */
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5,
+.g6,
+.g7,
+.g8,
+.g9,
+.g10,
+.g11,
+.g12 {
+    position: relative;
+    margin: 0 1% 1% 1%;
 }
+
+
+/*  #Columns - Grid  */
+
+.container .g1 {
+    width: 6.33%;
+}
+
+.container .g2 {
+    width: 14.67%;
+}
+
+.container .g3 {
+    width: 23.0%;
+}
+
+.container .g4 {
+    width: 31.333%;
+}
+
+.container .g5 {
+    width: 39.667%;
+}
+
+.container .g6 {
+    width: 48.0%;
+}
+
+.container .g7 {
+    width: 56.333%;
+}
+
+.container .g8 {
+    width: 64.667%;
+}
+
+.container .g9 {
+    width: 73.0%;
+}
+
+.container .g10 {
+    width: 81.333%;
+}
+
+.container .g11 {
+    width: 89.667%;
+}
+
+.container .g12 {
+    width: 98.0%;
+}
+
+
+/* #MOBILE  */
+
+@media only screen and (max-width:640px) {
+    .container .g1, .container .g2, .container .g3, .container .g4, .container .g5, .container .g6, .container .g7, .container .g8, .container .g9, .container .g10, .container .g11, .container .g12 {
+        width: 100%;
+    }
+}
+
+
+/*  Self Clearing Goodness  */
+
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*  Typography  */
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+    font-size: 40px;
+    color: #f5a623;
+    line-height: 48px;
+    display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #999;
+    line-height: 29px;
+    padding: 10px;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+    font-style: italic;
+    font-size: 20px;
+    color: #000;
+    line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
-}
-
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
-}
-
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
+    padding: 10px 5%;
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+    font-size: 14px;
+    color: #333;
+    line-height: 21px;
 }
 
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
+/*  Site Styles  */
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
 
-.orange {
-  background-color: #f5ae23;
-}
+/*  Header  */
 
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
+header {
+    background-color: #484848;
 }
 
 .biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
-img {
-  padding: 10px;
-}
-
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
+    float: left;
+    padding: 10px;
+    width: 200px;
     display: none;
-  }
 }
+
+.welcome-message {
+    font-style: italic;
+    font-size: 18px;
+    color: #f3f3f3;
+    line-height: 28px;
+}
+
+#skills-h3 {
+    color: #f5ae23;
+    display: none;
+}
+
+
+/*  Work Section  */
+
+.education-entry,
+.work-entry,
+.project-entry {
+    padding: 0 5%;
+}
+
+.date-text {
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: left;
+}
+
+.location-text {
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: right;
+}
+
+
+/*  Projects Section  */
+
+
+/*  Map Section  */
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+
+/*  Footer  */
+
+#lets-connect {
+    text-align: center;
+}
+
+
+/*  TODO --- Change Styles  */
+
+.orange {
+    background-color: #f5ae23;
+}
+
+.orange-text {
+    color: #f5ae23;
+}
+
+.white-text {
+    font-weight: bold;
+    color: #fff;
+}
+
+.gray {
+    background-color: #f3f3f3;
+    padding-bottom: 10px;
+    clear: both;
+}
+
+.dark-gray {
+    background-color: #4a4a4a;
+}
+
+.center-content {
+    padding: 2.5% 5%;
+}
+
+span {
+    padding: 5px;
+}
+
+
+/*  Links, Lists, and Forms  */
+
+a {
+    color: #1199c3;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/*  Images  */
+
+img {
+    padding: 10px;
+}
+
+
+/*  Media queries to handle various device widths  */
+
+@media only screen and (max-width: 1024px) {
+    #lets-connect {
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .biopic {
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #lets-connect {
+        margin-top: 10%;
+    }
+    .biopic {
+        width: 150px;
+    }
+    .welcome-message {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
+    #skills-h3, .biopic {
+        display: block;
+    }
 }
