@@ -112,17 +112,20 @@
     clear: both;
 }
 
+
 /*  Site Styles  */
 
-#main{
-	margin: 0;
-	padding: 0;
+#main {
+    margin: 0;
+    padding: 0;
 }
-body{
-	background-color: #000;
-font-family: 'Ropa', serif;
-	color:#fff;
+
+body {
+    background-color: #000;
+    font-family: 'Ropa', serif;
+    color: #fff;
 }
+
 
 /*  Typography  */
 
@@ -161,8 +164,8 @@ h3,
 h4,
 h5 {
     padding: 10px 5%;
-	font-family: 'Slabo 27px', serif;
-	letter-spacing: 2px;
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 2px;
 }
 
 p {
@@ -170,51 +173,52 @@ p {
     line-height: 21px;
 }
 
+
 /*  Header  */
 
 header {
-    background:url(../images/headerBG.png);
-	background-size: cover;
-	height:900px;
-	padding:1% 0 ;
+    background: url(../images/headerBG.png);
+    background-size: cover;
+    height: 900px;
+    padding: 1% 0;
 }
 
-#header span:nth-child(3){
-	padding-left: 40%;
-	font-size: 1.2em;
+#header span:nth-child(3) {
+    padding-left: 40%;
+    font-size: 1.2em;
 }
 
 #header span:nth-child(1),
-#header span:nth-child(2){
-	margin:5% 0;
-	padding: 1%;
+#header span:nth-child(2) {
+    margin: 5% 0;
+    padding: 1%;
 }
 
-#header{
-	background-color: rgba(52, 73, 94,.5);
-	padding:1%;
-	margin-right:10%;
-	margin-bottom:10%;
+#header {
+    background-color: rgba(52, 73, 94, .5);
+    padding: 1%;
+    margin-right: 10%;
+    margin-bottom: 10%;
 }
 
-.navLink{
-	border: solid 3px #fff;
-	color:#fff;
-	text-align: center;
-	padding:2%;
-	margin: 5% 10% 5% 0;
+.navLink {
+    border: solid 3px #fff;
+    color: #fff;
+    text-align: center;
+    padding: 2%;
+    margin: 5% 10% 5% 0;
 }
 
-#topContacts{
-	width:80%;
+#topContacts {
+    width: 80%;
 }
 
 .biopic {
-	width:200px;
-	padding: 0;
-	margin:5% 12%;
-	border:solid 10px #c0392b;
-	border-radius: 100%;
+    width: 200px;
+    padding: 0;
+    margin: 5% 12%;
+    border: solid 10px #c0392b;
+    border-radius: 100%;
 }
 
 .welcome-message {
@@ -229,13 +233,13 @@ header {
     display: none;
 }
 
-#skillsChart{
-	width:400px;
-	height:500px;
+#skillsChart {
+    width: 400px;
+    height: 500px;
 }
 
-.skillsLegend{
-	padding-top:10%;
+.skillsLegend {
+    padding-top: 10%;
 }
 
 .skill1,
@@ -244,46 +248,47 @@ header {
 .skill4,
 .skill5,
 .skill6,
-.skill7{
-	margin-top: 5%;
-	padding:3%;
-	text-align: center;
-	font-weight: 700;
-	border:solid 2px #fff;
+.skill7 {
+    margin-top: 5%;
+    padding: 3%;
+    text-align: center;
+    font-weight: 700;
+    border: solid 2px #fff;
 }
 
-.skill1{
-	background-color: #16a085;
+.skill1 {
+    background-color: #16a085;
 }
 
-.skill2{
-	background-color: #27ae60;
+.skill2 {
+    background-color: #27ae60;
 }
 
-.skill3{
-	background-color: #f1c40f;
+.skill3 {
+    background-color: #f1c40f;
 }
 
-.skill4{
-	background-color: #d35400;
+.skill4 {
+    background-color: #d35400;
 }
 
-.skill5{
-	background-color: #c0392b;
+.skill5 {
+    background-color: #c0392b;
 }
 
-.skill6{
-	background-color: #8e44ad;
+.skill6 {
+    background-color: #8e44ad;
 }
 
-.skill7{
-	background-color: #2980b9;
+.skill7 {
+    background-color: #2980b9;
 }
+
 
 /*  First Section  */
 
-.first-section{
-	background-image: url(../images/pw_maze_black.png);
+.first-section {
+    background-image: url(../images/pw_maze_black.png);
 }
 
 .education-entry,
@@ -292,11 +297,11 @@ header {
     padding: 0 5%;
 }
 
-.work-entry{
-	background-color: #fff;
-	color:#323232;
-	padding:1% 2%;
-	margin-bottom:1%;
+.work-entry {
+    background-color: #fff;
+    color: #323232;
+    padding: 1% 2%;
+    margin-bottom: 1%;
 }
 
 .date-text {
@@ -316,25 +321,26 @@ header {
 }
 
 #education .date-text,
-#education .location-text{
-	color:#fff;
+#education .location-text {
+    color: #fff;
 }
 
-.onlineTitle{
-	color:#fff;
-	text-align: center;
-	border-top:solid 2px #fff;
-	border-bottom:solid 2px #fff;
+.onlineTitle {
+    color: #fff;
+    text-align: center;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
 }
+
 
 /*  Second Section  */
 
-.second-section{
-	background-image: url(../images/pw_maze_inverted.png);
+.second-section {
+    background-image: url(../images/pw_maze_inverted.png);
 }
 
-.project-entry{
-	color:#000;
+.project-entry {
+    color: #000;
 }
 
 #map {
@@ -359,8 +365,8 @@ header {
     text-align: center;
 }
 
-#footerContacts{
-	display: inline-block;
+#footerContacts {
+    display: inline-block;
 }
 
 .orange {
@@ -373,7 +379,7 @@ header {
 
 .white-text {
     font-weight: bold;
-	font-size:1em;
+    font-size: 1em;
     color: #fff;
 }
 
@@ -429,15 +435,14 @@ img {
     .biopic {
         width: 175px;
     }
-
-		#skillsLegend{
-		margin:0;
-		padding:0;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-	}
+    #skillsLegend {
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 @media only screen and (max-width: 769px) {
@@ -447,46 +452,40 @@ img {
     .biopic {
         width: 75%;
     }
-
-	#header{
-		min-width:100%;
-	}
+    #header {
+        min-width: 100%;
+    }
     .welcome-message {
         display: none;
     }
-	.white-text{
-		font-size:1em;
-	}
-
-	header{
-		height:auto;
-	}
-
-	#skillsChart{
-		padding:0;
-		height:auto;
-	}
-
-	#skillsChart canvas{
-		height:100px;
-		width:75%;
-	}
-
-	#skillsLabel {
-		margin:0;
-		padding-right:10%;
-		width:100%;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-	}
-
-	#footerContacts {
-		display:block;
-	}
-
-	#mapDiv,{
-		height:450px;
-	}
+    .white-text {
+        font-size: 1em;
+    }
+    header {
+        height: auto;
+    }
+    #skillsChart {
+        padding: 0;
+        height: auto;
+    }
+    #skillsChart canvas {
+        height: 100px;
+        width: 75%;
+    }
+    #skillsLabel {
+        margin: 0;
+        padding-right: 10%;
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    #footerContacts {
+        display: block;
+    }
+    #mapDiv,
+    {
+        height: 450px;
+    }
 }

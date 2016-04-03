@@ -26,67 +26,59 @@ var bio = {
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
         $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
-		$("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
-        $("#header-info").prepend(formattedWelcomeMsg, formattedBioPic, HTMLskillsStart );
+        $("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
+        $("#header-info").prepend(formattedWelcomeMsg, formattedBioPic, HTMLskillsStart);
     }
 };
 
 // Skills Chart library and documentation "www.chartsjs.org"
 
-var doughnutData = [
-	{
-	value: 90,
-	color:"#16a085",
-	highlight: "#1abc9c",
-	label: "HTML"
-	},
-	{
-	value: 80,
-	color:"#27ae60",
-	highlight: "#2ecc71",
-	label: "CSS"
-	},
-	{
-	value: 45,
-	color: "#f39c12",
-	highlight: "#f1c40f",
-	label: "Javascript"
-	},
-	{
-	value: 75,
-	color: "#d35400",
-	highlight: "#e67e22",
-	label: "Adobe Creative Suite"
-	},
-	{
-	value: 60,
-	color: "#c0392b",
-	highlight: "#e74c3c",
-	label: "UX/UI Design"
-	},
-	{
-	value: 85,
-	color: "#8e44ad",
-	highlight: "#9b59b6",
-	label: "Creativity"
-	},
-	{
-	value: 110,
-	color: "#2980b9",
-	highlight: "#3498db",
-	label: "Awesomeness"
-	}
-];
+var doughnutData = [{
+    value: 90,
+    color: "#16a085",
+    highlight: "#1abc9c",
+    label: "HTML"
+}, {
+    value: 80,
+    color: "#27ae60",
+    highlight: "#2ecc71",
+    label: "CSS"
+}, {
+    value: 45,
+    color: "#f39c12",
+    highlight: "#f1c40f",
+    label: "Javascript"
+}, {
+    value: 75,
+    color: "#d35400",
+    highlight: "#e67e22",
+    label: "Adobe Creative Suite"
+}, {
+    value: 60,
+    color: "#c0392b",
+    highlight: "#e74c3c",
+    label: "UX/UI Design"
+}, {
+    value: 85,
+    color: "#8e44ad",
+    highlight: "#9b59b6",
+    label: "Creativity"
+}, {
+    value: 110,
+    color: "#2980b9",
+    highlight: "#3498db",
+    label: "Awesomeness"
+}];
 
-window.onload = function(){
-	var ctx = document.getElementById("chartArea").getContext("2d");
-	window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
-		responsive : true,
-		animationSteps : 200
-	})
+window.onload = function() {
+    var ctx = document.getElementById("chartArea").getContext("2d");
+    window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+        responsive: true,
+        animationSteps: 200
+    })
 };
 
 // Work Section
@@ -193,7 +185,7 @@ var education = {
             var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
             $(".education-entry:last").append(formattedSchoolMajor);
             $(".education-entry:last").append(HTMLonlineClasses);
-			$(".education-entry").children("h3").addClass("onlineTitle");
+            $(".education-entry").children("h3").addClass("onlineTitle");
         }
         for (course in education.onlineCourses) {
             var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
