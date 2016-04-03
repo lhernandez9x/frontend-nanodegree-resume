@@ -1,152 +1,94 @@
 <!DOCTYPE html>
-
-<!--
-This is an HTML document. It contains information about how elements in the website
-are arranged. In other words, it describes the layout of a website.
-
-I can't wait to see the resumes you put together!
-
-Cameron Pittman, Udacity Course Developer
--->
-
-<!--
-The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to CSS files for styles and
-<scripts> for JavaScript files to build interactions.
--->
+<html>
 
 <head>
-    <!-- This tells the browser how to read the document. -->
     <meta charset="utf-8">
-
-    <!-- Tells the browser what the title of this page should be. -->
     <title>Resume</title>
 
     <!-- Load the page styles. -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
-    <!--
-  jQuery is a common JavaScript library for reading and making changes to the
-  Document Object Model (DOM). The DOM is a tree that contains information
-  about what is actually visible on a website.
+	<!-- Load the page styles. -->
+	<link href='https://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 
-  While HTML is a static document, the browser converts HTML to the
-  DOM and the DOM can change. In fact, JavaScript's power comes from
-  its ability to manipulate the DOM, which is essentially a JavaScript
-  object. When JavaScript makes something interesting happen on a
-  website, it's likely the action happened because JavaScript changed
-  the DOM. jQuery is fast and easy to use, but it doesn't do anything
-  you can't accomplish with vanilla (regular) JavaScript.
-  -->
+    <!-- Load the page scripts. -->
     <script src="js/jQuery.js"></script>
-
-    <!-- More on helper.js in the class -->
+	<script src="js/Chart.js"></script>
     <script src="js/helper.js"></script>
-
-    <!--
-  Uncomment the <script> tag below when you're ready to add an interactive
-  Google Map to your resume!
-  -->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
     <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
-    <div id="main">
-        <header>
-            <div id="header" class="container">
-                <ul id="topContacts" class="flex-box"></ul>
-            </div>
-        </header>
-        <section class="work-ed">
-            <div class="container">
-                <div class="row">
-                    <div id="workExperience" class="g6">
-                        <h2>Work Experience</h2>
-                    </div>
-                    <div id="education" class="g6">
-                        <h2>Education</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="container">
-                <div class="row">
-                    <h2>Projects</h2>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div id="mapDiv">
-                <h2>Where I've Lived and Worked</h2>
-            </div>
-        </section>
-        <footer>
-            <div id="lets-connect" class="dark-gray">
-                <h2 class="orange center-text">Let's Connect</h2>
-                <ul id="footerContacts" class="">
-                </ul>
-            </div>
-        </footer>
-    </div>
+    <header>
+        <div class="container">
+			<div class="row">
+				<div id="header" class="g3"><hr>
+					<ul id="topContacts"></ul>
+					<ul>
+						<li><a href="#workExperience" class="white-text">Work and Education</a></li>
+						<li><a href="#projects" class="white-text">Projects</a></li>
+						<li><a href="#map" class="white-text">Places</a></li>
+					</ul>
+				</div>
+				<div id="header-info" class="g6">
+					<div class="row">
+						<div id="skillsChart" class="g6">
+								<canvas id="chartArea" height="175px" width="200px"></canvas>
+						</div>
+						<div id="skillsLabel" class="g4">
+							<ul class="skillsLegend">
+								<li class="skill1">HTML</li>
+								<li class="skill2">CSS</li>
+								<li class="skill3">Javascript</li>
+								<li class="skill4">Adobe Creative Suite</li>
+								<li class="skill5">UX/UI Design</li>
+								<li class="skill6">Creativity</li>
+								<li class="skill7">Awesomeness</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </header>
 
-    <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
+    <section class="first-section">
+        <div class="container">
+            <div class="row">
+                <div id="workExperience" class="g6">
+                    <h2>Work Experience</h2>
+                </div>
+                <div id="education" class="g6">
+                    <h2>Education</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="second-section">
+        <div id="projects" class="container">
+            <div class="row">
+                <h2>Projects</h2>
+            </div>
+        </div>
+        <div id="mapDiv">
+            <h2>Where I've Lived and Worked</h2>
+        </div>
+    </section>
+
+    <footer>
+        <div id="lets-connect" class="dark-gray">
+            <h2 class="orange center-text">Let's Connect</h2>
+            <ul id="footerContacts" class="">
+            </ul>
+        </div>
+    </footer>
     <script src="js/resumeBuilder.js"></script>
-
-
-    <!--
-  These scripts are written in JavaScript. You'll be breaking them down as part of
-  a quiz. Essentially, the next few lines are checking to see if you have not
-  changed each section of the resume. If you have not made any changes to a section
-  of the resume, then that part of the resume does not show up. More on this in the
-  course.
-  -->
-
-    //
-    <script type="text/javascript">
-        // Notice how all of a sudden there's JavaScript inside this HTML
-        // document? You can write JavaScript between <script> tags. At the end of your
-        // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-        // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-        //   two slashes for all following characters on a single line, or
-
-        /*
-            an opening and closing set of slash asterisks for block comments.
-        */
-
-
-        if (document.getElementsByClassName('flex-item').length === 0) {
-            document.getElementById('topContacts').style.backgroundColor = 'black';
-        }
-        if (document.getElementsByTagName('h1').length === 0) {
-            document.getElementById('header').style.backgroundColor = 'black';
-        }
-        if (document.getElementsByClassName('work-entry').length === 0) {
-            document.getElementById('workExperience').style.backgroundColor = 'black';
-        }
-        if (document.getElementsByClassName('project-entry').length === 0) {
-            document.getElementById('projects').style.backgroundColor = 'black';
-        }
-        if (document.getElementsByClassName('education-entry').length === 0) {
-            document.getElementById('education').style.backgroundColor = 'black';
-        }
-        if (document.getElementsByClassName('flex-item').length === 0) {
-            document.getElementById('lets-connect').style.backgroundColor = 'black';
-        }
-        if (document.getElementById('map') === null) {
-            document.getElementById('mapDiv').style.backgroundColor = 'black';
-        }
-    </script>
 </body>
 
 </html>
