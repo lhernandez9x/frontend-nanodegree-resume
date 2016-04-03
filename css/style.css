@@ -127,7 +127,7 @@ font-family: 'Ropa', serif;
 /*  Typography  */
 
 h1 {
-    font-size: 40px;
+    font-size: 3em;
     color: #c0392b;
     line-height: 48px;
     display: inline;
@@ -135,7 +135,7 @@ h1 {
 
 h2 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 2.75;
     color: #c0392b;
     line-height: 29px;
     padding: 10px;
@@ -143,14 +143,14 @@ h2 {
 
 h3 {
     font-style: italic;
-    font-size: 20px;
+    font-size: 1.75em;
     color: #c0392b;
     line-height: 22px;
 }
 
 h4 {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1.25em;
     color: #c0392b;
     line-height: 17px;
 }
@@ -175,8 +175,8 @@ p {
 header {
     background:url(../images/headerBG.png);
 	background-size: cover;
-	height:100vh;
-	padding-top:1%;
+	height:900px;
+	padding:1% 0 ;
 }
 
 #header span:nth-child(3){
@@ -184,11 +184,29 @@ header {
 	font-size: 1.2em;
 }
 
+#header span:nth-child(1),
+#header span:nth-child(2){
+	margin:5% 0;
+	padding: 1%;
+}
+
 #header{
 	background-color: rgba(52, 73, 94,.5);
 	padding:1%;
-	margin-right:20%;
-	height: auto;
+	margin-right:10%;
+	margin-bottom:10%;
+}
+
+.navLink{
+	border: solid 3px #fff;
+	color:#fff;
+	text-align: center;
+	padding:2%;
+	margin: 5% 10% 5% 0;
+}
+
+#topContacts{
+	width:80%;
 }
 
 .biopic {
@@ -209,6 +227,15 @@ header {
 #skills-h3 {
     color: #fff;
     display: none;
+}
+
+#skillsChart{
+	width:400px;
+	height:500px;
+}
+
+.skillsLegend{
+	padding-top:10%;
 }
 
 .skill1,
@@ -252,7 +279,6 @@ header {
 .skill7{
 	background-color: #2980b9;
 }
-
 
 /*  First Section  */
 
@@ -312,7 +338,10 @@ header {
 }
 
 #map {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     height: 100%;
     margin: 0 5%;
 }
@@ -331,10 +360,7 @@ header {
 }
 
 #footerContacts{
-	display: -webkit-inline-box;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
+	display: inline-block;
 }
 
 .orange {
@@ -347,6 +373,7 @@ header {
 
 .white-text {
     font-weight: bold;
+	font-size:1em;
     color: #fff;
 }
 
@@ -402,22 +429,64 @@ img {
     .biopic {
         width: 175px;
     }
+
+		#skillsLegend{
+		margin:0;
+		padding:0;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 769px) {
     #lets-connect {
         margin-top: 10%;
     }
     .biopic {
-        width: 150px;
+        width: 75%;
     }
+
+	#header{
+		min-width:100%;
+	}
     .welcome-message {
         display: none;
     }
-}
+	.white-text{
+		font-size:1em;
+	}
 
-@media only screen and (min-width: 750px) {
-    #skills-h3, .biopic {
-        display: block;
-    }
+	header{
+		height:auto;
+	}
+
+	#skillsChart{
+		padding:0;
+		height:auto;
+	}
+
+	#skillsChart canvas{
+		height:100px;
+		width:75%;
+	}
+
+	#skillsLabel {
+		margin:0;
+		padding-right:10%;
+		width:100%;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	#footerContacts {
+		display:block;
+	}
+
+	#mapDiv,{
+		height:450px;
+	}
 }
