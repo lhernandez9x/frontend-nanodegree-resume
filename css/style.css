@@ -10,7 +10,7 @@
     margin-right: 4%;
 }
 
-.row {
+.container .row {
     width: 100%;
     margin-bottom: 1%;
     display: -webkit-box;
@@ -93,7 +93,7 @@
 }
 
 
-/* #MOBILE  */
+/*  Mobile Grid  */
 
 @media only screen and (max-width:640px) {
     .container .g1, .container .g2, .container .g3, .container .g4, .container .g5, .container .g6, .container .g7, .container .g8, .container .g9, .container .g10, .container .g11, .container .g12 {
@@ -112,12 +112,23 @@
     clear: both;
 }
 
+/*  Site Styles  */
+
+#main{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #000;
+font-family: 'Ropa', serif;
+	color:#fff;
+}
 
 /*  Typography  */
 
 h1 {
     font-size: 40px;
-    color: #f5a623;
+    color: #c0392b;
     line-height: 48px;
     display: inline;
 }
@@ -125,7 +136,7 @@ h1 {
 h2 {
     font-weight: bold;
     font-size: 24px;
-    color: #999;
+    color: #c0392b;
     line-height: 29px;
     padding: 10px;
 }
@@ -133,61 +144,121 @@ h2 {
 h3 {
     font-style: italic;
     font-size: 20px;
-    color: #000;
+    color: #c0392b;
     line-height: 22px;
 }
 
 h4 {
     font-weight: bold;
     font-size: 14px;
-    color: #4a4a4a;
+    color: #c0392b;
     line-height: 17px;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5 {
     padding: 10px 5%;
+	font-family: 'Slabo 27px', serif;
+	letter-spacing: 2px;
 }
 
 p {
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
     line-height: 21px;
 }
-
-
-/*  Site Styles  */
-
 
 /*  Header  */
 
 header {
-    background-color: #484848;
+    background:url(../images/headerBG.png);
+	background-size: cover;
+	height:100vh;
+	padding-top:1%;
+}
+
+#header span:nth-child(3){
+	padding-left: 40%;
+	font-size: 1.2em;
+}
+
+#header{
+	background-color: rgba(52, 73, 94,.5);
+	padding:1%;
+	margin-right:20%;
+	height: auto;
 }
 
 .biopic {
-    float: left;
-    padding: 10px;
-    width: 200px;
-    display: none;
+	width:200px;
+	padding: 0;
+	margin:5% 12%;
+	border:solid 10px #c0392b;
+	border-radius: 100%;
 }
 
 .welcome-message {
     font-style: italic;
-    font-size: 18px;
+    font-size: 24px;
     color: #f3f3f3;
     line-height: 28px;
 }
 
 #skills-h3 {
-    color: #f5ae23;
+    color: #fff;
     display: none;
 }
 
+.skill1,
+.skill2,
+.skill3,
+.skill4,
+.skill5,
+.skill6,
+.skill7{
+	margin-top: 5%;
+	padding:3%;
+	text-align: center;
+	font-weight: 700;
+	border:solid 2px #fff;
+}
 
-/*  Work Section  */
+.skill1{
+	background-color: #16a085;
+}
+
+.skill2{
+	background-color: #27ae60;
+}
+
+.skill3{
+	background-color: #f1c40f;
+}
+
+.skill4{
+	background-color: #d35400;
+}
+
+.skill5{
+	background-color: #c0392b;
+}
+
+.skill6{
+	background-color: #8e44ad;
+}
+
+.skill7{
+	background-color: #2980b9;
+}
+
+
+/*  First Section  */
+
+.first-section{
+	background-image: url(../images/pw_maze_black.png);
+}
 
 .education-entry,
 .work-entry,
@@ -195,10 +266,17 @@ header {
     padding: 0 5%;
 }
 
+.work-entry{
+	background-color: #fff;
+	color:#323232;
+	padding:1% 2%;
+	margin-bottom:1%;
+}
+
 .date-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #323232;
     line-height: 16px;
     float: left;
 }
@@ -206,16 +284,32 @@ header {
 .location-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #323232;
     line-height: 16px;
     float: right;
 }
 
+#education .date-text,
+#education .location-text{
+	color:#fff;
+}
 
-/*  Projects Section  */
+.onlineTitle{
+	color:#fff;
+	text-align: center;
+	border-top:solid 2px #fff;
+	border-bottom:solid 2px #fff;
+}
 
+/*  Second Section  */
 
-/*  Map Section  */
+.second-section{
+	background-image: url(../images/pw_maze_inverted.png);
+}
+
+.project-entry{
+	color:#000;
+}
 
 #map {
     display: block;
@@ -236,15 +330,19 @@ header {
     text-align: center;
 }
 
-
-/*  TODO --- Change Styles  */
+#footerContacts{
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
 
 .orange {
-    background-color: #f5ae23;
+    background-color: #373737;
 }
 
 .orange-text {
-    color: #f5ae23;
+    color: #c0392b;
 }
 
 .white-text {
@@ -259,7 +357,7 @@ header {
 }
 
 .dark-gray {
-    background-color: #4a4a4a;
+    background-color: #000;
 }
 
 .center-content {
