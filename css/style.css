@@ -1,4 +1,4 @@
-/*  #Grid  */
+    /*  #Grid  */
 
 
 /*  #Container & Row  */
@@ -429,22 +429,18 @@ img {
     #lets-connect {
         margin-top: 5%;
     }
-
-	#skillsChart{
-		width:250px;
-		height:250px
-	}
-
-	#chartArea{
-		max-width: 300px;
-		max-height:300px;
-	}
-
-	.skillsLegend:last-child{
-		width: 100%;
-	}
+    #skillsChart {
+        width: 250px;
+        height: 250px
+    }
+    #chartArea {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .skillsLegend:last-child {
+        width: 100%;
+    }
 }
-
 
 @media only screen and (max-width:900px) {
     .biopic {
@@ -458,49 +454,47 @@ img {
         display: -ms-flexbox;
         display: flex;
     }
-
-
-@media only screen and (max-width: 769px) {
-    #lets-connect {
-        margin-top: 10%;
+    @media only screen and (max-width: 769px) {
+        #lets-connect {
+            margin-top: 10%;
+        }
+        .biopic {
+            width: 75%;
+        }
+        #header {
+            min-width: 100%;
+        }
+        .welcome-message {
+            display: none;
+        }
+        .white-text {
+            font-size: 1em;
+        }
+        header {
+            height: auto;
+        }
+        #skillsChart {
+            padding: 0;
+            height: auto;
+        }
+        #skillsChart canvas {
+            height: 100px;
+            width: 75%;
+        }
+        #skillsLabel {
+            margin: 0;
+            padding-right: 10%;
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        #footerContacts {
+            display: block;
+        }
+        #mapDiv,
+        {
+            height: 450px;
+        }
     }
-    .biopic {
-        width: 75%;
-    }
-    #header {
-        min-width: 100%;
-    }
-    .welcome-message {
-        display: none;
-    }
-    .white-text {
-        font-size: 1em;
-    }
-    header {
-        height: auto;
-    }
-    #skillsChart {
-        padding: 0;
-        height: auto;
-    }
-    #skillsChart canvas {
-        height: 100px;
-        width: 75%;
-    }
-    #skillsLabel {
-        margin: 0;
-        padding-right: 10%;
-        width: 100%;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    #footerContacts {
-        display: block;
-    }
-    #mapDiv,
-    {
-        height: 450px;
-    }
-}

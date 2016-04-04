@@ -134,7 +134,7 @@ var work = {
             var formattedEmpDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
             var formattedEmpDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
-			$(".work-entry:last").append(formattedEmployerTitle, formattedEmpLocation, formattedEmpDate, formattedEmpDescription);
+            $(".work-entry:last").append(formattedEmployerTitle, formattedEmpLocation, formattedEmpDate, formattedEmpDescription);
         }
     }
 };
@@ -177,11 +177,11 @@ var education = {
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
             var formattedSchoolNameDegree = formattedSchoolName + " " + formattedSchoolDegree;
-			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-			var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+            var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+            var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+            var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 
-			$(".education-entry:last").append(formattedSchoolNameDegree, formattedSchoolLocation, formattedSchoolDates, formattedSchoolMajor);
+            $(".education-entry:last").append(formattedSchoolNameDegree, formattedSchoolLocation, formattedSchoolDates, formattedSchoolMajor);
             $(".education-entry:last").append(HTMLonlineClasses);
             $(".education-entry").children("h3").addClass("onlineTitle");
         }
