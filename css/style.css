@@ -425,11 +425,26 @@ img {
 
 /*  Media queries to handle various device widths  */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
     #lets-connect {
         margin-top: 5%;
     }
+
+	#skillsChart{
+		width:250px;
+		height:250px
+	}
+
+	#chartArea{
+		max-width: 300px;
+		max-height:300px;
+	}
+
+	.skillsLegend:last-child{
+		width: 100%;
+	}
 }
+
 
 @media only screen and (max-width:900px) {
     .biopic {
@@ -443,7 +458,7 @@ img {
         display: -ms-flexbox;
         display: flex;
     }
-}
+
 
 @media only screen and (max-width: 769px) {
     #lets-connect {
