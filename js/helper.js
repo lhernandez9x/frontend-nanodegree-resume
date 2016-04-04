@@ -139,7 +139,7 @@ function initializeMap() {
         // as described in the Udacity FEND Style Guide:
         // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
         work.jobs.forEach(function(job) {
-            locations.push(job.workLocation);
+            locations.push(job.location);
         });
 
         return locations;
