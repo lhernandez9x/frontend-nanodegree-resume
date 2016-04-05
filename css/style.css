@@ -1,500 +1,472 @@
-    /*  #Grid  */
-
-
-/*  #Container & Row  */
-
-.container {
-    position: relative;
-    width: 92%;
-    margin-left: 4%;
-    margin-right: 4%;
-}
-
-.container .row {
-    width: 100%;
-    margin-bottom: 1%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-
-/*  #Columns  */
-
-.g1,
-.g2,
-.g3,
-.g4,
-.g5,
-.g6,
-.g7,
-.g8,
-.g9,
-.g10,
-.g11,
-.g12 {
-    position: relative;
-    margin: 0 1% 1% 1%;
-}
-
-
-/*  #Columns - Grid  */
-
-.container .g1 {
-    width: 6.33%;
-}
-
-.container .g2 {
-    width: 14.67%;
-}
-
-.container .g3 {
-    width: 23.0%;
-}
-
-.container .g4 {
-    width: 31.333%;
-}
-
-.container .g5 {
-    width: 39.667%;
-}
-
-.container .g6 {
-    width: 48.0%;
-}
-
-.container .g7 {
-    width: 56.333%;
-}
-
-.container .g8 {
-    width: 64.667%;
-}
-
-.container .g9 {
-    width: 73.0%;
-}
-
-.container .g10 {
-    width: 81.333%;
-}
-
-.container .g11 {
-    width: 89.667%;
-}
-
-.container .g12 {
-    width: 98.0%;
-}
-
-
-/*  Mobile Grid  */
-
-@media only screen and (max-width:640px) {
-    .container .g1, .container .g2, .container .g3, .container .g4, .container .g5, .container .g6, .container .g7, .container .g8, .container .g9, .container .g10, .container .g11, .container .g12 {
-        width: 100%;
-    }
-}
-
-
-/*  Self Clearing Goodness  */
-
-.container:after,
-.row:after,
-.u-cf {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/*  Site Styles  */
-
-#main {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #000;
-    font-family: 'Ropa', serif;
-    color: #fff;
-}
-
-
-/*  Typography  */
-
-h1 {
-    font-size: 3em;
-    color: #c0392b;
-    line-height: 48px;
-    display: inline;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 2.75;
-    color: #c0392b;
-    line-height: 29px;
-    padding: 10px;
-}
-
-h3 {
-    font-style: italic;
-    font-size: 1.75em;
-    color: #c0392b;
-    line-height: 22px;
-}
-
-h4 {
-    font-weight: bold;
-    font-size: 1.25em;
-    color: #c0392b;
-    line-height: 17px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    padding: 10px 5%;
-    font-family: 'Slabo 27px', serif;
-    letter-spacing: 2px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 21px;
-}
-
-
-/*  Header  */
-
-header {
-    background: url(../images/headerBG.png);
-    background-size: cover;
-    height: 900px;
-    padding: 1% 0;
-}
-
-#header span:nth-child(3) {
-    padding-left: 40%;
-    font-size: 1.2em;
-}
-
-#header span:nth-child(1),
-#header span:nth-child(2) {
-    margin: 5% 0;
-    padding: 1%;
-}
-
-#header {
-    background-color: rgba(52, 73, 94, .5);
-    padding: 1%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-}
-
-.navLink {
-    border: solid 3px #fff;
-    color: #fff;
-    text-align: center;
-    padding: 2%;
-    margin: 5% 10% 5% 0;
-}
-
-#topContacts {
-    width: 80%;
-}
-
-.biopic {
-    width: 200px;
-    padding: 0;
-    margin: 5% 12%;
-    border: solid 10px #c0392b;
-    border-radius: 100%;
-}
-
-.welcome-message {
-    font-style: italic;
-    font-size: 24px;
-    color: #f3f3f3;
-    line-height: 28px;
-}
-
-#skills-h3 {
-    color: #fff;
-    display: none;
-}
-
-#skillsChart {
-    width: 400px;
-    height: 500px;
-}
-
-.skillsLegend {
-    padding-top: 10%;
-}
-
-.skill1,
-.skill2,
-.skill3,
-.skill4,
-.skill5,
-.skill6,
-.skill7 {
-    margin-top: 5%;
-    padding: 3%;
-    text-align: center;
-    font-weight: 700;
-    border: solid 2px #fff;
-}
-
-.skill1 {
-    background-color: #16a085;
-}
-
-.skill2 {
-    background-color: #27ae60;
-}
-
-.skill3 {
-    background-color: #f1c40f;
-}
-
-.skill4 {
-    background-color: #d35400;
-}
-
-.skill5 {
-    background-color: #c0392b;
-}
-
-.skill6 {
-    background-color: #8e44ad;
-}
-
-.skill7 {
-    background-color: #2980b9;
-}
-
-
-/*  First Section  */
-
-.first-section {
-    background-image: url(../images/pw_maze_black.png);
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
-    padding: 0 5%;
-}
-
-.work-entry {
-    background-color: #fff;
-    color: #323232;
-    padding: 1% 2%;
-    margin-bottom: 1%;
-}
-
-.date-text {
-    font-style: italic;
-    font-size: 14px;
-    color: #323232;
-    line-height: 16px;
-    float: left;
-}
-
-.location-text {
-    font-style: italic;
-    font-size: 14px;
-    color: #323232;
-    line-height: 16px;
-    float: right;
-}
-
-#education .date-text,
-#education .location-text {
-    color: #fff;
-}
-
-.onlineTitle {
-    color: #fff;
-    text-align: center;
-    border-top: solid 2px #fff;
-    border-bottom: solid 2px #fff;
-}
-
-
-/*  Second Section  */
-
-.second-section {
-    background-image: url(../images/pw_maze_inverted.png);
-}
-
-.project-entry {
-    color: #000;
-}
-
-#map {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    margin: 0 5%;
-}
-
-#mapDiv {
-    height: 400px;
-    width: 100%;
-    padding-bottom: 5%;
-}
-
-
-/*  Footer  */
-
-#lets-connect {
-    text-align: center;
-}
-
-#footerContacts {
-    display: inline-block;
-}
-
-.orange {
-    background-color: #373737;
-}
-
-.orange-text {
-    color: #c0392b;
-}
-
-.white-text {
-    font-weight: bold;
-    font-size: 1em;
-    color: #fff;
-}
-
-.gray {
-    background-color: #f3f3f3;
-    padding-bottom: 10px;
-    clear: both;
-}
-
-.dark-gray {
-    background-color: #000;
-}
-
-.center-content {
-    padding: 2.5% 5%;
-}
-
-span {
-    padding: 5px;
-}
-
-
-/*  Links, Lists, and Forms  */
-
-a {
-    color: #1199c3;
-    text-decoration: none;
-    margin-top: 10px;
-    display: block;
-}
-
-ul {
-    list-style-type: none;
-}
-
-
-/*  Images  */
-
-img {
-    padding: 10px;
-}
-
-
-/*  Media queries to handle various device widths  */
-
-@media only screen and (max-width: 1025px) {
-    #lets-connect {
-        margin-top: 5%;
-    }
-    #skillsChart {
-        width: 250px;
-        height: 250px
-    }
-    #chartArea {
-        max-width: 300px;
-        max-height: 300px;
-    }
-    .skillsLegend:last-child {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width:900px) {
-    .biopic {
-        width: 175px;
-    }
-    #skillsLegend {
-        margin: 0;
-        padding: 0;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    @media only screen and (max-width: 769px) {
-        #lets-connect {
-            margin-top: 10%;
-        }
-        .biopic {
-            width: 75%;
-        }
-        #header {
-            min-width: 100%;
-        }
-        .welcome-message {
-            display: none;
-        }
-        .white-text {
-            font-size: 1em;
-        }
-        header {
-            height: auto;
-        }
-        #skillsChart {
-            padding: 0;
-            height: auto;
-        }
-        #skillsChart canvas {
-            height: 100px;
-            width: 75%;
-        }
-        #skillsLabel {
-            margin: 0;
-            padding-right: 10%;
-            width: 100%;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-        }
-        #footerContacts {
-            display: block;
-        }
-        #mapDiv,
-        {
-            height: 450px;
-        }
-    }
+     /*  #Grid  */
+ /*  #Container & Row  */
+
+ .container {
+     position: relative;
+     width: 92%;
+     margin-left: 4%;
+     margin-right: 4%;
+ }
+
+ .container .row {
+     width: 100%;
+     margin-bottom: 1%;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-flex-wrap: wrap;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+ }
+ /*  #Columns  */
+
+ .g1,
+ .g2,
+ .g3,
+ .g4,
+ .g5,
+ .g6,
+ .g7,
+ .g8,
+ .g9,
+ .g10,
+ .g11,
+ .g12 {
+     position: relative;
+     margin: 0 1% 1% 1%;
+ }
+ /*  #Columns - Grid  */
+
+ .container .g1 {
+     width: 6.33%;
+ }
+
+ .container .g2 {
+     width: 14.67%;
+ }
+
+ .container .g3 {
+     width: 23.0%;
+ }
+
+ .container .g4 {
+     width: 31.333%;
+ }
+
+ .container .g5 {
+     width: 39.667%;
+ }
+
+ .container .g6 {
+     width: 48.0%;
+ }
+
+ .container .g7 {
+     width: 56.333%;
+ }
+
+ .container .g8 {
+     width: 64.667%;
+ }
+
+ .container .g9 {
+     width: 73.0%;
+ }
+
+ .container .g10 {
+     width: 81.333%;
+ }
+
+ .container .g11 {
+     width: 89.667%;
+ }
+
+ .container .g12 {
+     width: 98.0%;
+ }
+ /*  Mobile Grid  */
+
+ @media only screen and (max-width: 640px) {
+     .container .g1, .container .g2, .container .g3, .container .g4, .container .g5, .container .g6, .container .g7, .container .g8, .container .g9, .container .g10, .container .g11, .container .g12 {
+         width: 100%;
+     }
+ }
+ /*  Self Clearing Goodness  */
+
+ .container:after,
+ .row:after,
+ .u-cf {
+     content: "";
+     display: table;
+     clear: both;
+ }
+ /*  Site Styles  */
+
+ #main {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     background-color: #000;
+     font-family: 'Ropa', serif;
+     color: #fff;
+ }
+ /*  Typography  */
+
+ h1 {
+     font-size: 3em;
+     color: #c0392b;
+     line-height: 48px;
+     display: inline;
+ }
+
+ h2 {
+     font-weight: bold;
+     font-size: 2.75;
+     color: #c0392b;
+     line-height: 29px;
+     padding: 10px;
+ }
+
+ h3 {
+     font-style: italic;
+     font-size: 1.75em;
+     color: #c0392b;
+     line-height: 22px;
+ }
+
+ h4 {
+     font-weight: bold;
+     font-size: 1.25em;
+     color: #c0392b;
+     line-height: 17px;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5 {
+     padding: 10px 5%;
+     font-family: 'Slabo 27px', serif;
+     letter-spacing: 2px;
+ }
+
+ p {
+     font-size: 16px;
+     line-height: 21px;
+ }
+ /*  Header  */
+
+ header {
+     background: url(../images/headerBG.png);
+     background-size: cover;
+     height: 900px;
+     padding: 1% 0;
+ }
+
+ #header span:nth-child(3) {
+     padding-left: 35%;
+     font-size: 1.25rem;
+ }
+
+ #header span:nth-child(1),
+ #header span:nth-child(2) {
+     margin: 5% 0;
+     padding: 1%;
+ }
+
+ #header {
+     background-color: rgba(52, 73, 94, .5);
+     padding: 1%;
+     margin-right: 10%;
+     margin-bottom: 10%;
+ }
+
+ .navLink {
+     border: solid 3px #fff;
+     color: #fff;
+     text-align: center;
+     padding: 2%;
+     margin: 5% 10% 5% 0;
+ }
+
+ #topContacts {
+     width: 80%;
+ }
+
+ .biopic {
+     width: 200px;
+     padding: 0;
+     margin: 5% 12%;
+     border: solid 10px #c0392b;
+     border-radius: 100%;
+ }
+
+ .welcome-message {
+     font-style: italic;
+     font-size: 24px;
+     color: #f3f3f3;
+     line-height: 28px;
+ }
+
+ #skills-h3 {
+     color: #fff;
+     display: none;
+ }
+
+ #skillsChart {
+     width: 400px;
+     height: 500px;
+ }
+
+ .skillsLegend {
+     padding-top: 10%;
+ }
+
+ .skill1,
+ .skill2,
+ .skill3,
+ .skill4,
+ .skill5,
+ .skill6,
+ .skill7 {
+     margin-top: 5%;
+     padding: 3%;
+     text-align: center;
+     font-weight: 700;
+     border: solid 2px #fff;
+ }
+
+ .skill1 {
+     background-color: #16a085;
+ }
+
+ .skill2 {
+     background-color: #27ae60;
+ }
+
+ .skill3 {
+     background-color: #f1c40f;
+ }
+
+ .skill4 {
+     background-color: #d35400;
+ }
+
+ .skill5 {
+     background-color: #c0392b;
+ }
+
+ .skill6 {
+     background-color: #8e44ad;
+ }
+
+ .skill7 {
+     background-color: #2980b9;
+ }
+ /*  First Section  */
+
+ .first-section {
+     background-image: url(../images/pw_maze_black.png);
+ }
+
+ .education-entry,
+ .work-entry,
+ .project-entry {
+     padding: 0 5%;
+ }
+
+ .work-entry {
+     background-color: #fff;
+     color: #323232;
+     padding: 1% 2%;
+     margin-bottom: 1%;
+ }
+
+ .date-text {
+     font-style: italic;
+     font-size: 14px;
+     color: #323232;
+     line-height: 16px;
+     float: left;
+ }
+
+ .location-text {
+     font-style: italic;
+     font-size: 14px;
+     color: #323232;
+     line-height: 16px;
+     float: right;
+ }
+
+ #education .date-text,
+ #education .location-text {
+     color: #fff;
+ }
+
+ .onlineTitle {
+     color: #fff;
+     text-align: center;
+     border-top: solid 2px #fff;
+     border-bottom: solid 2px #fff;
+ }
+ /*  Second Section  */
+
+ .second-section {
+     background-image: url(../images/pw_maze_inverted.png);
+ }
+
+ .project-entry {
+     color: #000;
+ }
+
+ #map {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     height: 100%;
+     margin: 0 5%;
+ }
+
+ #mapDiv {
+     height: 400px;
+     width: 100%;
+     padding-bottom: 5%;
+ }
+ /*  Footer  */
+
+ #lets-connect {
+     text-align: center;
+ }
+
+ #footerContacts {
+     display: inline-block;
+ }
+
+ .orange {
+     background-color: #373737;
+ }
+
+ .orange-text {
+     color: #c0392b;
+ }
+
+ .white-text {
+     font-weight: bold;
+     font-size: 1em;
+     color: #fff;
+ }
+
+ .gray {
+     background-color: #f3f3f3;
+     padding-bottom: 10px;
+     clear: both;
+ }
+
+ .dark-gray {
+     background-color: #000;
+ }
+
+ .center-content {
+     padding: 2.5% 5%;
+ }
+
+ span {
+     padding: 5px;
+ }
+ /*  Links, Lists, and Forms  */
+
+ a {
+     color: #1199c3;
+     text-decoration: none;
+     margin-top: 10px;
+     display: block;
+ }
+
+ ul {
+     list-style-type: none;
+ }
+ /*  Images  */
+
+ img {
+     padding: 10px;
+ }
+ /*  Media queries to handle various device widths  */
+
+ @media only screen and (max-width: 1025px) {
+     #lets-connect {
+         margin-top: 5%;
+     }
+     #skillsChart {
+         width: 250px;
+         height: 250px
+     }
+     #chartArea {
+         max-width: 300px;
+         max-height: 300px;
+     }
+     .skillsLegend:last-child {
+         width: 100%;
+     }
+ }
+
+ @media only screen and (max-width: 900px) {
+     .biopic {
+         width: 175px;
+     }
+     #skillsLegend {
+         margin: 0;
+         padding: 0;
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+     }
+     @media only screen and (max-width: 769px) {
+         #lets-connect {
+             margin-top: 10%;
+         }
+         .biopic {
+             width: 75%;
+         }
+         #header {
+             min-width: 100%;
+         }
+         .welcome-message {
+             display: none;
+         }
+         .white-text {
+             font-size: 1em;
+         }
+         header {
+             height: auto;
+         }
+         #skillsChart {
+             padding: 0;
+             height: auto;
+         }
+         #skillsChart canvas {
+             height: 100px;
+             width: 75%;
+         }
+         #skillsLabel {
+             margin: 0;
+             padding-right: 10%;
+             width: 100%;
+             display: -webkit-box;
+             display: -webkit-flex;
+             display: -ms-flexbox;
+             display: flex;
+         }
+         #footerContacts {
+             display: block;
+         }
+         #mapDiv,
+         {
+             height: 450px;
+         }
+     }
