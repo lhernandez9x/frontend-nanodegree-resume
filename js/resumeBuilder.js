@@ -1,3 +1,5 @@
+'use strict';
+
 // Bio Section
 
 var bio = {
@@ -11,7 +13,7 @@ var bio = {
         "location": "El Paso, TX"
     },
     "welcomeMessage": "Hello, thanks for checking out my online resume. I have many skills that I have attained in different career types. There is one thing that always interested me though; <b>Web Development</b>. I am currently going through Udacity's Front-End Developer Nanodegree, hope to hear from you.",
-    "skills": ["HTML", "CSS", "Javascript", "Photoshop", "UX/UI Design", "Creativity", "and Awesomeness!"],
+    "skills": ["HTML", "CSS", "Javascript", "Adobe Creative Suite", "UX/UI Design", "Creativity", "Awesomeness!"],
     "biopic": "images/me.jpg",
     "display": function() {
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -27,10 +29,17 @@ var bio = {
         var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        var br = "<br>";
 
         $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
         $("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
         $("#header-info").prepend(formattedWelcomeMsg, formattedBioPic, HTMLskillsStart);
+        $(br).insertAfter("h1#name");
+
+        for (var i = 0, j = 0; i < bio.skills.length; i++) {
+            var skillHolder = bio.skills[i];
+            $(".skillsLegend").append('<li class="' + "skill" + (i + 1) + '">' + skillHolder + "</li>");
+        }
     }
 };
 
@@ -78,7 +87,7 @@ window.onload = function() {
     window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
         responsive: true,
         animationSteps: 200
-    })
+    });
 };
 
 // Header customization
@@ -124,7 +133,7 @@ var work = {
         "description": "Developed base for long-term sources of clients by using referrals to compile lists of prospects. Approached potential clients, made presentations to groups at company-sponsored gatherings. Determined clients' particular needs and financial situations by scheduling fact-finding appointments; determined extent of present coverage; ascertained long-term goals. Hired and trained new agents in the capacity role of Insurance Agents"
     }],
     "display": function() {
-        for (job in work.jobs) {
+        for (var job in work.jobs) {
             $("#workExperience").append(HTMLworkStart);
 
             var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -147,31 +156,32 @@ var education = {
         "location": "Online - El Paso, TX",
         "degree": "Bachelors of Science",
         "majors": ["Web Design and Interactive Media"],
-        "dates": "2010 - 2012"
+        "dates": "2010 - 2012",
+        "url": "https://www.aionline.edu/"
     }],
     "onlineCourses": [{
         "title": "UX Fundamentals",
         "school": "Aquent Gymnasium",
-        "dates": "2016",
+        "date": "2016",
         "url": "https://accredible.com/10130430"
     }, {
         "title": "Javascript Basics",
         "school": "Udacity",
-        "dates": "2016",
+        "date": "2016",
         "url": "https://www.udacity.com/course/javascript-basics--ud804-nd"
     }, {
         "title": "Intro to HTML",
         "school": "Udacity",
-        "dates": "2016",
+        "date": "2016",
         "url": "https://www.udacity.com/course/javascript-basics--ud804-nd"
     }, {
         "title": "Javascript Basics",
         "school": "Udacity",
-        "dates": "2016",
+        "date": "2016",
         "url": "https://www.udacity.com/course/javascript-basics--ud804-nd"
     }],
     "display": function() {
-        for (school in education.schools) {
+        for (var school in education.schools) {
             $("#education").append(HTMLschoolStart);
 
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -185,13 +195,13 @@ var education = {
             $(".education-entry:last").append(HTMLonlineClasses);
             $(".education-entry").children("h3").addClass("onlineTitle");
         }
-        for (course in education.onlineCourses) {
+        for (var course in education.onlineCourses) {
             var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
             var formattedOnlineTitleSchool = formattedOnlineTitle + " " + formattedOnlineSchool;
             $(".education-entry:last").append(formattedOnlineTitleSchool);
 
-            var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
             $(".education-entry:last").append(formattedOnlineDates);
             var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
             $(".education-entry:last").append(formattedOnlineUrl);
@@ -221,7 +231,7 @@ var projects = {
 
     ],
     "display": function() {
-        for (project in projects.projects) {
+        for (var project in projects.projects) {
             $("#projects").append(HTMLprojectStart);
 
             var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -231,12 +241,12 @@ var projects = {
             $(".project-entry:last").append(formattedProjectTitle, formattedProjectDates, formattedProjectDesc);
 
             if (projects.projects[project].images.length > 0) {
-                for (image in projects.projects[project].images) {
+                for (var image in projects.projects[project].images) {
                     var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                     $(".project-entry:last").append(formattedProjectImage);
-                };
-            };
-        };
+                }
+            }
+        }
     }
 };
 
@@ -253,7 +263,7 @@ $(document).click(function(loc) {
     var x = loc.pageX;
     var y = loc.pageY;
 
-    logClicks(x, y)
+    logClicks(x, y);
 });
 // Display  Map
 
