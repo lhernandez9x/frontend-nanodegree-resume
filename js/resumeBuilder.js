@@ -209,52 +209,10 @@ var education = {
     }
 };
 
-//Projects Section
-
-var projects = {
-    "projects": [{
-            "title": "Project Title",
-            "dates": "2016",
-            "description": "This is to describe the Project.",
-            "images": ["images/197x148.gif", "images/197x148.gif"]
-        }, {
-            "title": "Project Title",
-            "dates": "2016",
-            "description": "This is to describe the Project.",
-            "images": ["images/197x148.gif", "images/197x148.gif"]
-        }, {
-            "title": "Project Title",
-            "dates": "2016",
-            "description": "This is to describe the Project.",
-            "images": ["images/197x148.gif", "images/197x148.gif", "images/197x148.gif"]
-        }
-
-    ],
-    "display": function() {
-        for (var project in projects.projects) {
-            $("#projects").append(HTMLprojectStart);
-
-            var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-            var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-            var formattedProjectDesc = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-
-            $(".project-entry:last").append(formattedProjectTitle, formattedProjectDates, formattedProjectDesc);
-
-            if (projects.projects[project].images.length > 0) {
-                for (var image in projects.projects[project].images) {
-                    var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-                    $(".project-entry:last").append(formattedProjectImage);
-                }
-            }
-        }
-    }
-};
-
 // Dispaly Sections
 bio.display();
 work.display();
 education.display();
-projects.display();
 
 
 // Logging clicks
